@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Selectors in JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <h1>Accessing Selectors in JQuery</h1>
+    <div id="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem fugiat mollitia id omnis eligendi vero, harum vitae illum veritatis?
+    </div>
+    <div class="box2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed blanditiis dignissimos delectus, neque perferendis consequuntur possimus odit ullam unde vitae, quod optio? Fugiat maiores nam dolor tempore commodi autem saepe doloremque optio perferendis laboriosam? Necessitatibus ex sequi quis porro incidunt at veniam odit tenetur aliquam dolor aspernatur eligendi, soluta blanditiis!
+    </div>
+    <div>
+        <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Dart</li>
+            <li>Flutter</li>
+        </ul>
+    </div>
+    <div id="container">
+        <h2>Heading 2 Tag</h2>
+        <p>Paragraph Tag</p>
+        <span>Span Tag</span>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('h1').css({
+                color:'darkgreen',
+                background:'lightgreen',
+                border:'2px dotted darkgreen',
+                'text-align':'center'
+            });
+
+            $('#box1').css('background-color','yellow');
+
+            $('.box2').css('background-color',"lightpink");
+            $('.box2').css('text-align',"justify");
+
+            $('#box1, .box2').css('border','1px solid black');
+
+            $('ul li').css('font-weight','700');
+
+            $('li:first').css('background-color','lightgreen');
+            $('li:last').css('background-color','yellow');
+
+            $('li:odd').css({
+                'background-color':'darkblue',
+                'color':'lightblue'
+            });
+            $('li:even').css({
+                'background-color':'lightblue',
+                'color':'darkblue'
+            })
+
+            $('h2, p, span').css('color','red')
+        });
+    </script>
+</body>
+</html>
