@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Mouse Event</title><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        fieldset{
+            height: 100px;
+            width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mouse Events</h1>
+    <fieldset id="div1">
+        <legend>Mouse Click()</legend>
+        <button id="btn1">Click Me</button>
+    </fieldset>
+    <fieldset id="div2">
+        <legend>Mouse Double Click()</legend> 
+        <button id="btn2">Double Click Me</button>
+    </fieldset>
+    <fieldset id="div3">
+        <legend>Mouse Cntext(Side button) Click()</legend> 
+        <button id="btn3">Cilck Right/Left Button</button>
+    </fieldset>
+    <fieldset id="div4">
+        <legend>Mouse Over()</legend> 
+        <button id="btn4">Mouse Over</button>
+    </fieldset>
+    <fieldset id="div5">
+        <legend>Mouse Leave()</legend> 
+        <button id="btn5">Leave Mouse</button>
+    </fieldset>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#div1').css('background-color','red');
+            })
+
+            $('#btn2').dblclick(function(){
+                $('#div2').css('background-color','green');
+            })
+
+            $('#btn3').contextmenu(function(){
+                $('#div3').css('background-color','pink');
+            })
+
+            $('#btn4').mouseover(function(){
+                $('#div4').css('background-color','yellow');
+            })
+
+            $('#btn5').mouseleave(function(){
+                $('#div5').css('background-color','violet');
+            })
+        });
+    </script>
+</body>
+</html>
