@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        div{
+            margin: auto;
+            background-color: blanchedalmond;
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body> 
+    <div>
+        <center>
+            <label for="name">Name : </label>
+            <input type="text">
+        </center>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('input').keypress(function(){
+                $(this).css('background-color','pink');
+            })
+
+            $('input').keydown(function(){
+                $('body').css('background-color','blue');
+            })
+
+            $('input').keyup(function(){
+                $('body').css('background-color','green');
+            })
+        })
+    </script>
+</body>
+</html>
