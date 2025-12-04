@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Event</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 400px;
+            border: 2px solid grey;
+            overflow: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit distinctio dignissimos, repellendus, sint accusamus officiis, possimus voluptates quidem voluptatibus quae praesentium deleniti iure? Sunt, voluptate molestias, dolor nam nisi, suscipit itaque placeat qui soluta doloribus quibusdam sequi atque tenetur non. Sint saepe delectus necessitatibus cum, quas id sapiente consectetur veritatis veniam adipisci recusandae vitae! Reiciendis consectetur sequi deserunt esse, omnis eius ut commodi dolorum exercitationem quasi perspiciatis adipisci inventore, dicta perferendis asperiores delectus quo ullam quibusdam, recusandae nostrum iusto quia mollitia! Maxime repellat nihil nesciunt velit. Eius aperiam recusandae tempora mollitia, atque fugiat libero, ipsam ab distinctio, voluptatum necessitatibus perferendis repudiandae odio id sunt ducimus cupiditate eaque cumque saepe. Eaque dolor corporis sed ea autem quam consequatur, laborum voluptate id vel cupiditate nam tempora enim ipsum deserunt labore aspernatur, nobis accusamus magnam dolores? Necessitatibus harum quas est temporibus odit quae, voluptatum provident id sapiente cupiditate quia veniam, nisi fugit explicabo! Vel nisi obcaecati voluptatibus aperiam consequuntur illo molestiae, dolor neque quisquam cum eaque, fugiat dolores tempore quis fuga. Quas officiis repudiandae quibusdam porro quia quos deleniti reprehenderit asperiores. Neque provident placeat facilis aliquam illum commodi cumque illo libero quia nostrum error, perferendis natus dolore beatae quis culpa vero quidem! Maiores distinctio tenetur repellat maxime, numquam, amet consequuntur eveniet quo incidunt dolorum tempore autem libero dolore quasi dolor corporis fugit. Dolores illum obcaecati ipsum eaque ab accusamus hic nobis similique corporis dolorum eveniet architecto officia veritatis esse natus neque maiores assumenda, nulla repudiandae! Ab voluptates rem animi, vel libero voluptatibus laboriosam nemo asperiores temporibus recusandae soluta culpa perferendis cupiditate accusantium nulla, aliquid dignissimos itaque tempore blanditiis sint ullam molestias ratione reprehenderit! Rerum laboriosam earum libero aliquid beatae eius commodi labore fugit asperiores incidunt eos ex est fugiat omnis quaerat, temporibus at iste ad a expedita ullam quae et repudiandae error. Rerum.
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.box').scroll(function(){
+                console.log('You Scrolled !!!');
+            });
+            $(window).resize(function(){
+                console.log('You Resize The Window!!!')
+            });
+        });
+    </script>
+</body>
+</html>
