@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h2>Get Methods in JQuery</h2>
+
+    <div class="box div1">
+        <label for="name">Name</label>
+        <input type="text" value="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ducimus, expedita aspernatur voluptas
+            repudiandae maiores rem quas! Sunt, laudantium nemo.</p>
+    </div>
+    <button id="btn" style="color:black">Click Me</button>
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('label').text('Enter Your Name');
+
+                var name = $('input').val();
+                if (name == "") {
+                    $('div p').html('<b>Please Enter Your Name in Given Box to get Value of Name</b>')
+                        .css('color', 'red')
+
+                }
+                else {
+                    $('div p').html('Good Morning ' + name)
+                        .css('color', 'green')
+                }
+                $('#btn').attr('class', 'btnClick');
+
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
