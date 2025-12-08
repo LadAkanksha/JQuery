@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addclass and Removeclass</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+            .light{
+                background-color: blue;
+                color: white;
+            }
+            .dark{
+                background-color: blanchedalmond;
+                color: brown;
+            }
+        </style>
+</head>
+<body>
+    <h1>JQuery Class Methods</h1>
+
+    <div class="box">
+        <h4>Test Box</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatem ad molestias maiores ut repudiandae omnis nisi illo nostrum maxime.</p>
+    </div>
+    <button id="btnAddCls">Add Class</button>
+    <button id="btnRemoveCls">Remove Class</button>
+    <button id="btnToggleCls">Toggle Class</button>
+    <script>
+        $(document).ready(function(){
+            $('.box').css({
+                height:"200px",
+                width:"400px",
+                border:"2px solid green",
+                padding:"10px"
+            })
+        });
+        $('#btnAddCls').click(function(){
+            $('.box').addClass('light');
+        });
+        $('#btnRemoveCls').click(function(){
+            $('.box').removeClass('light');
+        })
+        $('#btnToggleCls').click(function(){
+            $('.box').toggleClass('dark')
+        });
+    </script>
+</body>
+</html>
