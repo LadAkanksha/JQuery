@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Method</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>JQuery CSS Methods</h1>
+
+    <div class="box">
+        <h4>Test Box</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatem ad molestias maiores ut repudiandae omnis nisi illo nostrum maxime.</p>
+    </div>
+    <button id="btnCls">Add CSS</button>
+    <script>
+        $(document).ready(function(){
+            $('#btnCls').click(function(){
+                $('.box').css({
+                    'background-color':'maroon',
+                    'color':'white',
+                    'border':'2px dotted yellow',
+                    'height':'300px',
+                    'width':'400px'
+                });
+            });
+
+            $('.box').click(function(){
+                $('h1').css({
+                    color:'darkblue',
+                    'background-color':'azure'
+                });
+            })
+            
+        });
+    </script>
+</body>
+</html>
