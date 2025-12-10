@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON() & OFF() Method</title>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>JQuery ON & OFF Methods</h1>
+
+    <div class="box">
+        <h4>Test Box</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatem ad molestias maiores ut repudiandae omnis nisi illo nostrum maxime.</p>
+    </div>
+    <button id="btnRemoveCls">Remove Event</button>
+    <script>
+        $(document).ready(function(){
+            $('.box').on({
+                "click":function(){
+                    $(this).css('background-color', 'yellow')
+                },
+                "mouseenter":function(){
+                    $(this).css('background-color', 'pink')
+                },
+                "mouseleave":function(){
+                    $(this).css('background-color', 'white')
+                }
+            });
+
+            $('#btnRemoveCls').click(function(){
+                $('.box').off("click mouseleave")
+            });
+        });
+    </script>
+</body>
+</html>
