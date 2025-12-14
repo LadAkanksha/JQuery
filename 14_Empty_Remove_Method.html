@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            padding: 10px auto;
+            width: 300px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        <h2>Empty & Remove Method in JQuery</h2>
+        <ol>
+            <li>Item </li>
+            <li>Item </li>
+            <li>Item </li>
+            <li>Item </li>
+        </ol>
+    </div>
+    <button id="btnEmpty">Empty</button>
+    <button id="btnRemove">Remove</button>
+    <script>
+        $(document).ready(function(){
+            $("#btnEmpty").click(function(){
+                $('.box ol').empty();
+            })
+             $("#btnRemove").click(function(){
+                $('.box').remove();
+            })
+        });
+    </script>
+</body>
+</html>
