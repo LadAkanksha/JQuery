@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppendTo & PrependTo Method</title>
+    <style>
+        .box{
+            height: 100%;
+            padding: 10px auto;
+            width: 300px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        
+        <ol>
+            <li>Item </li>
+            <li>Item </li>
+            <li>Item </li>
+            <li>Item </li>
+        </ol>
+    </div>
+    <button id="btnAppend">AppendTo</button>
+    <button id="btnPrepend">PrependTo</button>
+    <script>
+        $(document).ready(function(){
+            $("#btnAppend").click(function(){
+                $('<h2>Append Method in JQuery</h2>').appendTo('.box');
+            })
+             $("#btnPrepend").click(function(){
+                $('<h2>Prepend Method in JQuery</h2>').prependTo('.box');
+            })
+        });
+    </script>
+</body>
+</html>
