@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width & Height</title>
+    <style>
+        .box1 {
+            margin: 5px;
+            height: 100%;
+            padding: 10px;
+            width: 80%;
+            background-color: aquamarine;
+            border: 10px solid brown;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="box1">
+        <h1>JQuery Method</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nemo saepe sed, ratione quidem inventore
+            dolore laboriosam debitis enim non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse
+            atque eveniet labore mollitia dolore repellendus cumque! Veniam, accusamus perspiciatis. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Dolor voluptatum labore quis commodi nemo! Iste, libero! Debitis
+            quisquam eaque explicabo deleniti! Tempore, eaque. Quia ex, molestias cumque neque impedit veritatis!</p>
+        <br>
+    </div>
+
+    </div>
+    <button id="btnWidth">Width</button>
+    <button id="btnHeight">Height</button>
+
+    <script>
+        $(document).ready(function () {
+            console.log('Initial Width =>');
+            console.log($('.box1').width());
+            console.log($('.box1').innerWidth());
+            console.log($('.box1').outerWidth());
+            console.log($('.box1').outerWidth(true));
+            console.log('Initial Height =>');
+            console.log($('.box1').height());
+            console.log($('.box1').innerHeight());
+            console.log($('.box1').outerHeight());
+            console.log($('.box1').outerHeight(true));
+
+            $('#btnWidth').click(function () {
+                console.log('Width After Clicking Button => ')
+                $('.box1').width('600px');
+                console.log($('.box1').width());
+                console.log($('.box1').innerWidth());
+                console.log($('.box1').outerWidth());
+                console.log($('.box1').outerWidth(true));
+            })
+            $('#btnHeight').click(function () {
+                console.log('Height After Clicking Button =>')
+                $('.box1').height('300px');
+                console.log($('.box1').height());
+                console.log($('.box1').innerHeight());
+                console.log($('.box1').outerHeight());
+                console.log($('.box1').outerHeight(true));
+            })
+        })
+    </script>
+</body>
+
+</html>
