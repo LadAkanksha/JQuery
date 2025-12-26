@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Has Method</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+            .box {
+            margin: 5px;
+            height: 100%;
+            padding: 10px;
+            width: 80%;
+            background-color: aquamarine;
+            border: 1px solid brown;
+        }
+        </style>
+</head>
+<body>
+     <div class="box">
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi est iure ex omnis nisi optio officia explicabo, rerum minima veritatis at rem quam sint consectetur, laudantium quasi? Numquam, aliquam dolore.</p>
+    </div>
+    <button id="btnHas">Has Method</button>
+    <script>
+        $(document).ready(function(){
+            $('#btnHas').click(function(){
+                let x = console.log($('.box').hasClass('box1'));        //Check Whether the specified class is available or not
+            });
+        });
+    </script>
+</body>
+</html>
