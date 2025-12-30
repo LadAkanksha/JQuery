@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Method Chaining</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+            #box {
+            color: rgb(26, 5, 5);
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(140, 234, 203);
+            border: 1px solid brown;
+        }
+        #btnChain{
+            margin: 10px;
+            background-color: black;
+            color: white;
+        }
+        </style>
+</head>
+<body>
+    <div id="box">
+        <h2>Method Chaining</h2>
+        <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos tenetur minima laborum cum aut deserunt corrupti aliquid, quaerat reiciendis obcaecati quod molestiae, soluta fuga laboriosam esse, assumenda a unde quos aliquam. Ab minima labore numquam error similique, adipisci, voluptatum suscipit harum itaque alias quas ipsam. Delectus exercitationem voluptas dolorem reiciendis. adipisicing elit. Ad, deleniti. Illum recusandae atque cupiditate. Harum consequatur ad optio qui voluptas placeat, cumque sed quo minus sit! Tenetur, cum architecto? Consequuntur.</p>
+    </div>
+    <br>
+    <button id="btnChain">Chain</button>
+    <script>
+        $(document).ready(function(){
+            $('#btnChain').click(function(){
+                $('#box').slideUp(1500).css('background-color','lightcyan').slideDown(1500);
+            });
+        });
+    </script>
+</body>
+</html>
