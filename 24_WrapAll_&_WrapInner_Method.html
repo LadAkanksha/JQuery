@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WrapAll() & WrapInner Method</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+            #box {
+            color: rgb(26, 5, 5);
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(140, 234, 203);
+            border: 1px solid brown;
+        }
+        .redcolor{
+            color:red;
+        }
+        .bg-green{
+            background-color: rgb(187, 237, 187);
+        }
+        .brown{
+            color: brown;
+        }
+        </style>
+</head>
+<body>
+    <h1>JQuery WrapAll() & WrapInner Method</h1>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos tenetur minima laborum cum aut deserunt corrupti aliquid, quaerat reiciendis obcaecati quod molestiae, soluta fuga laboriosam esse, assumenda a unde quos aliquam. Ab minima labore numquam error similique, adipisci, voluptatum suscipit harum itaque alias quas ipsam. Delectus exercitationem voluptas dolorem reiciendis. adipisicing elit. Ad, deleniti. Illum recusandae atque cupiditate. Harum consequatur ad optio qui voluptas placeat, cumque sed quo minus sit! Tenetur, cum architecto? Consequuntur.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, molestias.</p>
+    </div>
+    <br>
+    <button id="btnWrap">Wrap</button>
+    <button id="btnWrapAll">WrapAll</button>
+    <button id="btnWrapInner">WrapInner</button>
+    <script>
+        $(document).ready(function(){
+           $('#btnWrap').click(function(){
+            $('#box p').wrap('<span class="brown"></span>')
+           });
+
+           $('#btnWrapAll').click(function(){
+                $('#box p').wrapAll('<div class="bg-green"></div>');
+           });
+        
+           $('#btnWrapInner').click(function(){
+                $('h1').wrapInner('<span class=redcolor></span>');
+           });
+        });
+    </script>
+</body>
+</html>
