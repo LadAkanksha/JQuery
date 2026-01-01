@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Method</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+            #box {
+            width: 100px;
+            height: 100px;
+            color: rgb(26, 5, 5);
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(140, 234, 203);
+            border: 1px solid brown;
+            position: relative;
+        }
+        </style>
+</head>
+<body>
+    <h1>JQuery Animate Method</h1>
+    <div id="box">
+        Hello JQuery
+    </div>
+    <br>
+    <button id="btnAnime">Animate</button>
+    <button id="btnAnimeQueue">Animate Queue</button>
+    <script>
+        $(document).ready(function(){
+           $('#btnAnime').click(function(){
+            $('#box').animate({
+                top:'200px',
+                left:'500px',
+                fontSize:'20px',
+                fontWeight:'700',
+                borderWidth:'5px'
+            })
+           });
+
+           $('#btnAnimeQueue').click(function(){
+                $('#box').animate({top:'200px'},"3000",function(){
+                    console.log("Succeessfully Completed First Animation...");
+                });
+                $('#box').animate({left:'200'});
+                $('#box').animate({fontSize:'20px'});
+                $('#box').animate({fontWeight:'700'});
+                $('#box').animate({borderWidth:'5px'});
+                $('#box').animate({top:'0px'});
+                $('#box').animate({left:'0'});
+           })
+        });
+    </script>
+</body>
+</html>
